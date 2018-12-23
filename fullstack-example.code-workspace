@@ -1,0 +1,42 @@
+{
+	"folders": [
+		{
+			"name": "Root",
+			"path": "."
+		},
+		{
+			"name": "@app/Main",
+			"path": "packages\\node_modules\\@app\\main"
+		},
+		{
+			"name": "@service/Api",
+			"path": "packages\\node_modules\\@service\\api"
+		},
+		{
+			"name": "@service/Web",
+			"path": "packages\\node_modules\\@service\\web"
+		}
+	],
+	"settings": {
+		"javascript.format.enable": false,
+		"terminal.integrated.env.windows": {
+			"Path": "${workspaceFolder:Root}\\node_modules\\.bin;${env:Path}"
+		},
+		"terminal.integrated.env.linux": {
+			"PATH": "${workspaceFolder:Root}/node_modules/.bin:${env:PATH}"
+		},
+		"terminal.integrated.env.osx": {
+			"PATH": "${workspaceFolder:Root}/node_modules/.bin:${env:PATH}"
+		},
+        "editor.detectIndentation": false,
+        "editor.autoIndent": false,
+        "files.exclude": {
+            ".mister": true,
+            ".nyc_output": true,
+            "coverage": true,
+            "node_modules": true,
+            "packages/node_modules/**/**/dist": true,
+            "packages/node_modules/**/dist": true
+        }
+    }
+}

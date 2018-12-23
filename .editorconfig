@@ -1,0 +1,10 @@
+[*]
+root = true
+charset = utf-8
+indent_style = space
+
+[*.yml]
+indent_size = 2
+
+[*.js, *.ts, *.jsx, *.tsx]
+indent_size = 4

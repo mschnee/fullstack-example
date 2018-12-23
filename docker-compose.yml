@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  api-service:
+    build:
+      dockerfile: Dockerfile
+      context: packages/node_modules/@service/api/
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    environment:
+      - VIRTUAL_HOST=api.local.twopitau.com
+      - PORT=80
